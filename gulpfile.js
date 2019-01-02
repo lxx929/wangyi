@@ -77,6 +77,5 @@ gulp.task('webserver', function() { //启动服务
             }
         }));
 });
-gulp.task('dev', function() { //监听
-    gulp.watch('./sass/**/*.scss', gulp.series('scss', 'default', 'jsmin', 'webserver', 'cssmin', 'imgmin'));
-});
+//监听
+gulp.task('bulid', gulp.series('scss', 'default', 'jsmin', 'webserver', 'cssmin', 'imgmin'));
